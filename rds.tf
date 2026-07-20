@@ -1,6 +1,6 @@
 resource "aws_db_subnet_group" "oficina" {
   name       = "oficina-db-subnet"
-  subnet_ids = [aws_subnet.private_a.id, aws_subnet.private_b.id]
+  subnet_ids = [aws_subnet.public_a.id, aws_subnet.public_b.id]
 
   tags = { Name = "oficina-db-subnet-group" }
 }
