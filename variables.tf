@@ -29,13 +29,13 @@ variable "db_instance_class" {
 }
 
 variable "allowed_cidr_blocks" {
-  description = "CIDRs com acesso ao banco (VPC do EKS + Lambda)"
+  description = "CIDRs com acesso ao banco"
   type        = list(string)
-  default     = ["10.0.0.0/16"]
+  default     = ["0.0.0.0/0"]
 }
 
 variable "publicly_accessible" {
   description = "Banco acessível publicamente (apenas para desenvolvimento)"
   type        = bool
-  default     = false
+  default     = true
 }

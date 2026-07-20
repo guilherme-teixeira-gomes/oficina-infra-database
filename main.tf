@@ -10,7 +10,7 @@ terraform {
 
   # Estado remoto no S3 — crie o bucket antes: aws s3 mb s3://oficina-terraform-state-<seu-sufixo>
   backend "s3" {
-    bucket = "oficina-terraform-state"
+    bucket = "oficina-terraform-state-gtx"
     key    = "database/terraform.tfstate"
     region = "us-east-1"
   }
